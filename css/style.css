@@ -5,6 +5,7 @@ body {
   position: absolute;
   margin: 0;
   padding: 0;
+  background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
 }
 
 main {
