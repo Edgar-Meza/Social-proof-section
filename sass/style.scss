@@ -19,7 +19,7 @@ main {
     background-image: url(../images/bg-pattern-top-desktop.svg);
     background-repeat: no-repeat;
     background-size: initial;
-    section:nth-child(1) {
+    .section:nth-child(1) {
         grid-area: info;
         h1 {
             font-size: 3em;
@@ -33,7 +33,7 @@ main {
             color: hsl(303, 10%, 53%);
         }
     }
-    section:nth-child(2) {
+    .section:nth-child(2) {
         grid-area: rate;
         padding: 5%;
         padding-right: 0;
@@ -68,7 +68,7 @@ main {
             }
         }
     }
-    section:nth-child(3) {
+    .section:nth-child(3) {
         grid-area: opinion;
         display: flex;
         justify-content: space-between;
@@ -136,7 +136,7 @@ main {
 
 @media (max-width: 1200px) {
     main {
-        section:nth-child(2) {
+        .section:nth-child(2) {
             div {
                 width: 85%;
             }
@@ -151,7 +151,7 @@ main {
             "rate"
             "opinion"
         ;
-        section:nth-child(1) {
+        .section:nth-child(1) {
             text-align: center;
             h1 {
                 padding: 0;
@@ -160,7 +160,7 @@ main {
                 padding: 0;
             }
         }
-        section:nth-child(2) {
+        .section:nth-child(2) {
             padding-right: 5%;
             div {
                 width: 85%;
@@ -174,10 +174,10 @@ main {
     }
     main {
         background-image: url(../images/bg-pattern-top-mobile.svg);
-        section:nth-child(1) {
+        .section:nth-child(1) {
             margin-bottom: 25px;
         }
-        section:nth-child(2) {
+        .section:nth-child(2) {
             padding: 0;
             div {
                 width: 100%;
@@ -196,7 +196,7 @@ main {
                 }
             }
         }
-        section:nth-child(3) {
+        .section:nth-child(3) {
             flex-wrap: wrap;
             .card {
                 width: 100%;
@@ -213,7 +213,7 @@ main {
     main {
         padding-left: 5%;
         padding-right: 5%;
-        section:nth-child(1) {
+        .section:nth-child(1) {
             h1 {
                 font-size: 2em;
             }
