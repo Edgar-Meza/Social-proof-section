@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Spartan:wght@400;500;700&display=swap');
 body {
     width: 100%;
-    height: 100%;
-    position: absolute;
     margin: 0;
     padding: 0;
-    background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+    background-image: url(../images/bg-pattern-bottom-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 main {
     font-family: 'Spartan', sans-serif;
@@ -15,13 +15,17 @@ main {
         "info rate"
         "opinion opinion"
     ;
-    padding: 5%;
+    padding: 15vh;
+    background-image: url(../images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: initial;
     section:nth-child(1) {
         grid-area: info;
         h1 {
-            font-size: 3.5em;
+            font-size: 3em;
             margin: 0;
             color: hsl(300, 43%, 22%);
+            padding-right: 25%;
         }
         p {
             font-size: 15px;
@@ -34,7 +38,8 @@ main {
         padding: 5%;
         padding-right: 0;
         div:nth-child(2) {
-            margin-left: 10%;
+            margin-left: auto;
+            margin-right: auto;
         }
         div:nth-child(3) {
             margin-left: auto;
@@ -67,12 +72,14 @@ main {
         grid-area: opinion;
         display: flex;
         justify-content: space-between;
-        height: 250px;
-        div {
+        height: auto;
+        margin-top: 5vh;
+        .card {
             background-color: hsl(300, 43%, 22%);
             border-radius: 15px;
             width: 30%;
             color: #FFFFFF;
+            height: 250px;
             .head-card {
                 display: flex;
                 width: 100%;
@@ -100,8 +107,15 @@ main {
                     }
                     span {
                         color: hsl(333, 80%, 67%);
+                        font-size: 15px;
                     }
                 }
+            }
+            blockquote {
+                font-size: 12px;
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 5%;
             }
         }
         div:nth-child(2) {
@@ -118,4 +132,97 @@ main {
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1200px) {
+    main {
+        section:nth-child(2) {
+            div {
+                width: 85%;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    main {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "info"
+            "rate"
+            "opinion"
+        ;
+        section:nth-child(1) {
+            text-align: center;
+            h1 {
+                padding: 0;
+            }
+            p {
+                padding: 0;
+            }
+        }
+        section:nth-child(2) {
+            padding-right: 5%;
+            div {
+                width: 85%;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    body {
+        background-image: url(../images/bg-pattern-bottom-mobile.svg);
+    }
+    main {
+        background-image: url(../images/bg-pattern-top-mobile.svg);
+        section:nth-child(1) {
+            margin-bottom: 25px;
+        }
+        section:nth-child(2) {
+            padding: 0;
+            div {
+                width: 100%;
+                padding: 0;
+                flex-wrap: wrap;
+                height: auto;
+                div {
+                    width: 100%!important;
+                    margin: 0;
+                    text-align: center;
+                }
+                p {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 0;
+                }
+            }
+        }
+        section:nth-child(3) {
+            flex-wrap: wrap;
+            .card {
+                width: 100%;
+            }
+        }
+    }
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    main {
+        padding-left: 5%;
+        padding-right: 5%;
+        section:nth-child(1) {
+            h1 {
+                font-size: 2em;
+            }
+        }
+    }
+    .stars {
+        img {
+            width: 20px!important;
+            height: 20px!important;
+        }
+    }
 }
